@@ -53,7 +53,7 @@ jobs:
       - name: Build EXE
         run: |
           echo "开始打包 ${{ env.MAIN_SCRIPT }}"
-          pyinstaller --noconsole --onefile ${{ env.MAIN_SCRIPT }}
+          pyinstaller --noconsole --onefile --paths . --collect-submodules exporter --collect-submodules wxManager ${{ env.MAIN_SCRIPT }}
 
       - name: Show output files
         run: dir dist
