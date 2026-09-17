@@ -1,6 +1,7 @@
 name: Build EXE with PyInstaller and Cache
 
 on:
+  workflow_dispatch:
   push:
     branches: [ "master" ]
   pull_request:
